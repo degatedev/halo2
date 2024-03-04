@@ -332,11 +332,11 @@ where
             );
             // Add blinding factors to advice columns
             for advice_values in &mut advice_values {
-                for cell in &mut advice_values[self.unusable_rows_start..] {
-                    *cell = F::random(&mut self.rng);
-                }
-                // let idx = advice_values.len() - 1;
-                // advice_values[idx] = F::ONE;
+                // for cell in &mut advice_values[self.unusable_rows_start..] {
+                //     *cell = F::random(&mut self.rng);
+                // }
+                let idx = advice_values.len() - 1;
+                advice_values[idx] = F::ONE;
             }
             // Compute commitments to advice column polynomials
             let blinds: Vec<_> = advice_values
