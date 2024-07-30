@@ -1,6 +1,5 @@
 //! This module provides common utilities, traits and structures for group,
 //! field and polynomial arithmetic.
-
 use std::cmp;
 
 use super::multicore;
