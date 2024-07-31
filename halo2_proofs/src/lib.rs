@@ -24,3 +24,4 @@ pub mod transcript;
 pub mod dev;
 mod helpers;
 pub use helpers::SerdeFormat;
+extern crate lazy_static;
